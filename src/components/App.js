@@ -1,12 +1,12 @@
 import "./assets/css/Apps.css";
 
 import React from "react";
-import Nav from "./Nav";
+import Layouts from "./Layouts";
 
 export default function App() {
   return (
     <div>
-      <Nav />
+      <Layouts />
     </div>
   );
 }
