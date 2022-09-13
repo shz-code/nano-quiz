@@ -1,15 +1,14 @@
 import React from "react";
 import styles from "../components/assets/css/Layouts.module.css";
 import Nav from "./Nav";
-import Home from "./pages/Home";
 
-export default function Layouts() {
+export default function Layouts({children}) {
   return (
     <div>
       <Nav />
       <main className={styles.main}>
         <div className={styles.container}>
-            <Home />
+            {children}
         </div>
       </main>
       <footer className={styles.footer}>
