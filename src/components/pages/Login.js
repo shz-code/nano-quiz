@@ -24,7 +24,7 @@ export default function Login() {
           required
         />
 
-        <Button type="submit" text="Submit Now">
+        <Button type="submit">
           <span>Submit Now</span>
         </Button>
 
