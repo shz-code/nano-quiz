@@ -5,6 +5,7 @@ import Layouts from "./Layouts";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Quiz from "./pages/Quiz";
+import Result from "./pages/Result";
 import Signup from "./pages/Signup";
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Signup />
         <Login />
         <Quiz />
+        <Result />
       </Layouts>
     </div>
   );

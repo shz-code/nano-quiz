@@ -1,7 +1,7 @@
 import React from "react";
+import Answer from "../Answer";
 import Miniplayer from "../Miniplayer";
 import Progress from "../Progress";
-import Answer from "./Answer";
 
 export default function Quiz() {
   return (

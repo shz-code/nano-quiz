@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../assets/css/Answer.module.css";
-import Checkbox from "../CheckBox";
+import styles from "./assets/css/Answer.module.css";
+import Checkbox from "./CheckBox";
 export default function Answer() {
   return (
     <>
