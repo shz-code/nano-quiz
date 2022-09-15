@@ -1,10 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img from "./assets/images/html-basics-quiz.png";
-
 export default function Video() {
   return (
     <div>
-      <a href="quiz.html">
+      <Link to="/quiz">
         <div className="video">
           <img src={img} alt="" />
           <p>#1 Web basics</p>
@@ -13,7 +13,7 @@ export default function Video() {
             <p>Score : Not taken yet</p>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

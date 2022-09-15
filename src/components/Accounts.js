@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Accounts() {
   return (
@@ -6,9 +7,12 @@ export default function Accounts() {
       <span className="material-icons-outlined" title="Account">
         account_circle
       </span>
-      <a href="signup.html" className="signup-text">
+      <Link to="/signup" className="signup-text">
         Signup
-      </a>
+      </Link>
+      <Link to="/login" className="signup-text">
+        Login
+      </Link>
       {/* <span class="material-icons-outlined" title="Logout"> logout </span>  */}
     </div>
   );
