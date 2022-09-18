@@ -53,5 +53,10 @@ export default function AuthProvider({ children }) {
     logOut,
   };
 
-  return <AuthContext value={value}> {!loading && { children }} </AuthContext>;
+  return (
+    <AuthContext.Provider value={value}>
+      {" "}
+      {!loading && children}{" "}
+    </AuthContext.Provider>
+  );
 }
