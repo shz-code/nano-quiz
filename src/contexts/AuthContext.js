@@ -17,7 +17,7 @@ export function useAuth() {
 
 export default function AuthProvider({ children }) {
   const [loading, Setloading] = useState(true);
-  const [currentUser, SetcurrentUser] = useState();
+  const [currentUser, SetcurrentUser] = useState("Shanto");
 
   useEffect(() => {
     const auth = getAuth();
@@ -41,20 +41,20 @@ export default function AuthProvider({ children }) {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const logOut = () => {
+  const logout = () => {
     const auth = getAuth();
     return signOut(auth);
   };
 
-  const value = {
+  const values = {
     currentUser,
     signup,
     login,
-    logOut,
+    logout,
   };
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider value={values}>
       {" "}
       {!loading && children}{" "}
     </AuthContext.Provider>
