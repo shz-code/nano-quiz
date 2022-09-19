@@ -73,7 +73,7 @@ export default function Signup() {
             value={pass}
             onChange={(e) => Setpass(e.target.value)}
           />
-
+          <div>* Password should be at least 6 characters</div>
           <TextInput
             type="password"
             required

@@ -17,7 +17,7 @@ export function useAuth() {
 
 export default function AuthProvider({ children }) {
   const [loading, Setloading] = useState(true);
-  const [currentUser, SetcurrentUser] = useState("Shanto");
+  const [currentUser, SetcurrentUser] = useState("");
 
   useEffect(() => {
     const auth = getAuth();
@@ -33,12 +33,12 @@ export default function AuthProvider({ children }) {
     const auth = getAuth();
     await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(auth.currentUser, { displayName: username });
-    // SetcurrentUser({ ...auth.currentUser });
+    SetcurrentUser({ ...auth.currentUser });
   };
 
-  const login = (email, password) => {
+  const login = async (email, password) => {
     const auth = getAuth();
-    return signInWithEmailAndPassword(auth, email, password);
+    return await signInWithEmailAndPassword(auth, email, password);
   };
 
   const logout = () => {
