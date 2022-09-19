@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AuthProvider from "../contexts/AuthContext";
 import Layouts from "./Layouts";
 import { Home, Login, Quiz, Result, Signup } from "./pages/";
+import PrivateOutlet from "./PrivateOutlet";
+import PublicOutlet from "./PublicOutlet";
 
 export default function App() {
   return (
@@ -13,11 +15,15 @@ export default function App() {
         <AuthProvider>
           <Layouts>
             <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/signup" element={<Signup />} />
-              <Route exact path="/login" element={<Login />} />
-              <Route exact path="/quiz" element={<Quiz />} />
-              <Route exact path="/result" element={<Result />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/*" element={<PublicOutlet />}>
+                <Route path="signup" element={<Signup />} />
+                <Route path="login" element={<Login />} />
+              </Route>
+              <Route path="/*" element={<PrivateOutlet />}>
+                <Route path="quiz" element={<Quiz />} />
+                <Route path="result" element={<Result />} />
+              </Route>
             </Routes>
           </Layouts>
         </AuthProvider>

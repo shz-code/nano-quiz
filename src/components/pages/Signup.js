@@ -35,7 +35,6 @@ export default function Signup() {
       await signup(email, pass, name);
       navigator("/");
     } catch (err) {
-      console.log(err);
       Seterror("Failed to create account");
       Setloading(false);
     }

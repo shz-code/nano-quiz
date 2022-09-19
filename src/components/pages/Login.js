@@ -26,8 +26,13 @@ export default function Login() {
       Setloading(false);
       navigater("/");
     } catch (err) {
-      Seterror("Login Error");
-      console.log(err);
+      Setloading(false);
+      if (err.code === "auth/invalid-email")
+        Seterror("Invalid email. Try again!");
+      else if (err.code === "auth/user-not-found")
+        Seterror("User not found. Try again!");
+      else if (err.code === "auth/wrong-password")
+        Seterror("Password do not match. Try again!");
     }
   };
 
