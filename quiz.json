@@ -1,0 +1,16 @@
+{
+    "quiz":[
+        {
+            "noq": 4,
+            "title": "1st web design quiz",
+            "img": "https://ibb.co/BrDPjB9",
+            "sl": 1
+        },
+        {
+            "noq": 4,
+            "title": "2nd web design quiz",
+            "img":"https://ibb.co/BrDPjB9",
+            "sl": 2
+        }
+    ]
+}
