@@ -1,5 +1,5 @@
 import { useAuth } from "../../contexts/AuthContext";
-import Videos from "../Quizzes";
+import Quizzes from "../Quizzes";
 
 export default function Home() {
   const auth = useAuth();
@@ -11,7 +11,7 @@ export default function Home() {
         <span className="Logged-in-user">{currentUser.displayName}</span> to
         your dashboard
       </h1>
-      <Videos />
+      <Quizzes />
     </div>
   );
 }
