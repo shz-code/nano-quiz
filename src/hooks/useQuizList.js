@@ -23,7 +23,7 @@ export default function useQuizList(page) {
         quizRef,
         orderByKey(),
         startAt("" + page),
-        limitToFirst(4)
+        limitToFirst(8)
       );
 
       try {

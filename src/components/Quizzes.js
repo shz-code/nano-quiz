@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import useQuizList from "../hooks/useQuizList";
 import "./assets/css/Quizzes.css";
-import Quiz from "./Quiz";
+import QuizCard from "./QuizCard";
 
 export default function Quizzes() {
   const [page, Setpage] = useState(0);
@@ -13,10 +13,10 @@ export default function Quizzes() {
         <InfiniteScroll
           dataLength={quizList.length}
           hasMore={hasMore}
-          next={() => Setpage((prev) => prev + 4)}
+          next={() => Setpage((prev) => prev + 8)}
         >
           {quizList.map((item) => (
-            <Quiz item={item} key={item.sl} />
+            <QuizCard item={item} key={item.sl} />
           ))}
         </InfiniteScroll>
       )}

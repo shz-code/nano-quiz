@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Quiz({ item }) {
+export default function QuizCard({ item }) {
   const { sl, title, img, noq } = item;
+
   return (
     <div>
-      <Link to="/quiz">
+      <Link to={`/quiz/${sl}`}>
         <div className="quiz">
           <img src={img} alt="" />
           <p>
