@@ -5,7 +5,7 @@ export default function Quiz({ item }) {
   return (
     <div>
       <Link to="/quiz">
-        <div className="video">
+        <div className="quiz">
           <img src={img} alt="" />
           <p>
             #{sl} {title}

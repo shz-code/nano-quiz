@@ -1,16 +1,30 @@
-import { get, getDatabase, orderByKey, query, ref } from "firebase/database";
+import {
+  get,
+  getDatabase,
+  limitToFirst,
+  orderByKey,
+  query,
+  ref,
+  startAt,
+} from "firebase/database";
 import { useEffect, useState } from "react";
 
-export default function useQuizList() {
+export default function useQuizList(page) {
   const [quizList, SetquizList] = useState([]);
   const [loading, Setloading] = useState(true);
+  const [hasMore, SethasMore] = useState(true);
   const [error, Seterror] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
       const db = getDatabase();
       const quizRef = ref(db, "quiz");
-      const quizQuery = query(quizRef, orderByKey());
+      const quizQuery = query(
+        quizRef,
+        orderByKey(),
+        startAt("" + page),
+        limitToFirst(4)
+      );
 
       try {
         Seterror(false);
@@ -18,10 +32,17 @@ export default function useQuizList() {
         const snapshot = await get(quizQuery);
         Setloading(false);
         if (snapshot.exists()) {
-          SetquizList((prev) => {
-            return [...Object.values(snapshot.val())];
-            // return [...prev, ...Object.values(snapshot.val())];
-          });
+          if (page === 0) {
+            SetquizList((prev) => {
+              return [...Object.values(snapshot.val())];
+            });
+          } else {
+            SetquizList((prev) => {
+              return [...prev, ...Object.values(snapshot.val())];
+            });
+          }
+        } else {
+          SethasMore(false);
         }
       } catch (err) {
         Seterror(true);
@@ -30,12 +51,13 @@ export default function useQuizList() {
       }
     }
     fetchData();
-  }, []);
+  }, [page]);
 
   const values = {
     quizList,
     loading,
     error,
+    hasMore,
   };
 
   return values;

@@ -3,14 +3,68 @@
         {
             "noq": 4,
             "title": "1st web design quiz",
-            "img": "https://ibb.co/BrDPjB9",
+            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
             "sl": 1
         },
         {
             "noq": 4,
-            "title": "2nd web design quiz",
-            "img":"https://ibb.co/BrDPjB9",
+            "title": "3nd web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
             "sl": 2
+        },
+        {
+            "noq": 4,
+            "title": "3nd web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 3
+        },
+        {
+            "noq": 4,
+            "title": "4nd web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 4
+        },
+        {
+            "noq": 5,
+            "title": "5nd web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 5
+        },
+        {
+            "noq": 6,
+            "title": "6nd web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 6
+        },
+        {
+            "noq": 47,
+            "title": "7nd web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 7
+        },
+        {
+            "noq": 8,
+            "title": "8nd web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 8
+        },
+        {
+            "noq": 9,
+            "title": "9nd web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 9
+        },
+        {
+            "noq": 10,
+            "title": "10th web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 10
+        },
+        {
+            "noq": 411,
+            "title": "11th web design quiz",
+            "img":"https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+            "sl": 11
         }
     ]
 }
