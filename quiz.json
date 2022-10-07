@@ -78,6 +78,18 @@
                         },
                         {
                             "title": "Common Style Sheet"
+                        },
+                        {
+                            "title": "Commute Style Sheet"
+                        },
+                        {
+                            "title": "Cascade SSR Sheet"
+                        },
+                        {
+                            "title": "Common SSR Shell"
+                        },
+                        {
+                            "title": "Cascade Style Shell"
                         }
                     ]
                 },

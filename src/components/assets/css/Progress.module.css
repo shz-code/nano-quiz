@@ -1,6 +1,6 @@
 /* progress bar component */
 .progressBar {
-    /* width: calc(100vw - 100px); */
+    /* width: 90%; */
     height: 65px;
     /* position: fixed; */
     position: relative;
@@ -79,7 +79,7 @@
     height: 12px;
     width: 12px;
     position: absolute;
-    right: 0;
+    right: -5px;
     border-radius: 100%;
     background-color: var(--fontPrimary);
     transform: translateY(-50%);
@@ -90,7 +90,7 @@
 .tooltip {
     position: absolute;
     top: -70px;
-    left: calc(70% - 65px);
+    left: calc(50% - 58px);
     width: 130px;
     background-color: var(--fontPrimary);
     color: #fff;
@@ -111,4 +111,9 @@
     left: 50%;
     position: absolute;
     transform: rotate(45deg) translate(-50%, 100%);
+}
+
+
+.progressBar:hover .tooltip {
+    display: block;
 }
