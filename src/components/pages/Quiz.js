@@ -1,6 +1,8 @@
+import { getDatabase, ref, set } from "firebase/database";
 import _ from "lodash";
 import React, { useEffect, useReducer, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
 import useQuestions from "../../hooks/useQuestions";
 import Answer from "../Answer";
 import Miniplayer from "../Miniplayer";
@@ -32,6 +34,8 @@ export default function Quiz() {
 
   const { id } = useParams();
   const { loading, error, questions } = useQuestions(id);
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch({ type: "mod", value: questions });
@@ -58,6 +62,22 @@ export default function Quiz() {
     });
   };
 
+  const submit = async () => {
+    const db = getDatabase();
+    const { uid } = currentUser;
+    const resultRef = ref(db, `results/${uid}`);
+
+    await set(resultRef, {
+      [id]: modQuestions,
+    });
+
+    navigate(`/result/${id}`, {
+      state: {
+        modQuestions: modQuestions,
+      },
+    });
+  };
+
   return (
     <>
       {!loading && questions.length === 0 && <div>No Data Found!</div>}
@@ -75,6 +95,7 @@ export default function Quiz() {
             handleCurrentQna={handleCurrentQna}
             currentQna={currentQna}
             length={questions.length}
+            submit={submit}
           />
           <Miniplayer />
         </div>
