@@ -1,7 +1,12 @@
-export default function Checkbox({ className, text, ...rest }) {
+export default function Checkbox({ className, text, background, ...rest }) {
   return (
     <label className={className}>
-      <input type="checkbox" {...rest} /> <span>{text}</span>
+      <input type="checkbox" {...rest} />{" "}
+      {background ? (
+        <span style={{ background: "green" }}>{text}</span>
+      ) : (
+        <span>{text}</span>
+      )}
     </label>
   );
 }

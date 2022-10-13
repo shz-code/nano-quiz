@@ -117,5 +117,59 @@
                 }
             }
         }
+    },
+    "answers": {
+        "1": {
+            "contents": {
+                "1": {
+                    "title": "What is CSS",
+                    "choices": [
+                        {
+                            "correct": true,
+                            "title": "Cascade Style Sheet"
+                        },
+                        {
+                            "title": "Common Style Sheet"
+                        },
+                        {
+                            "title": "Commute Style Sheet"
+                        },
+                        {
+                            "title": "Cascade SSR Sheet"
+                        },
+                        {
+                            "title": "Common SSR Shell"
+                        },
+                        {
+                            "title": "Cascade Style Shell"
+                        }
+                    ]
+                },
+                "2": {
+                    "title": "What is HTML",
+                    "choices": [
+                        {
+                            "correct": true,
+                            "title": "Hyper"
+                        },
+                        {
+                            "title": "Higher"
+                        }
+                    ]
+                },
+                "3": {
+                    "title": "What is NEXT",
+                    "choices": [
+                        {
+                            "correct": true,
+                            "title": "JS library"
+                        },
+                        {
+                            "title": "Ruby on Rail"
+                        }
+                    ]
+                }
+            }
+        }
     }
 }
