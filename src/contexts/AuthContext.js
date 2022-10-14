@@ -29,10 +29,13 @@ export default function AuthProvider({ children }) {
     return authChange;
   }, []);
 
-  const signup = async (email, password, username) => {
+  const signup = async (email, password, username, universityID) => {
     const auth = getAuth();
     await createUserWithEmailAndPassword(auth, email, password);
-    await updateProfile(auth.currentUser, { displayName: username });
+    await updateProfile(auth.currentUser, {
+      displayName: username,
+      photoURL: universityID,
+    });
     SetcurrentUser({ ...auth.currentUser });
   };
 

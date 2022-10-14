@@ -8,7 +8,7 @@
         },
         {
             "noq": 4,
-            "title": "3nd web design quiz",
+            "title": "2nd web design quiz",
             "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
             "sl": 2
         },
@@ -116,6 +116,52 @@
                     ]
                 }
             }
+        },
+        "2": {
+            "contents": {
+                "1": {
+                    "title": "2nd question 1",
+                    "choices": [
+                        {
+                            "title": "2nd choice 1"
+                        },
+                        {
+                            "title": "2nd choice 2"
+                        },
+                        {
+                            "title": "2nd choice 3"
+                        },
+                        {
+                            "title": "2nd choice 4"
+                        }
+                    ]
+                },
+                "2": {
+                    "title": "2nd question 2",
+                    "choices": [
+                        {
+                            "title": "2nd choice 1"
+                        },
+                        {
+                            "title": "2nd choice 2"
+                        },
+                        {
+                            "title": "2nd choice 3"
+                        }
+                    ]
+                },
+                "3": {
+                    "title": "2nd question 3",
+                    "choices": [
+                        {
+                            "title": "2nd choice 1"
+                        },
+                        {
+                            "title": "2nd choice 2"
+                        }
+                    ]
+                }
+            }
         }
     },
     "answers": {
@@ -166,6 +212,57 @@
                         },
                         {
                             "title": "Ruby on Rail"
+                        }
+                    ]
+                }
+            }
+        },
+        "2": {
+            "contents": {
+                "1": {
+                    "title": "2nd question 1",
+                    "choices": [
+                        {
+                            "correct": true,
+                            "title": "2nd choice 1"
+                        },
+                        {
+                            "title": "2nd choice 2"
+                        },
+                        {
+                            "title": "2nd choice 3"
+                        },
+                        {
+                            "correct": true,
+                            "title": "2nd choice 4"
+                        }
+                    ]
+                },
+                "2": {
+                    "title": "2nd question 2",
+                    "choices": [
+                        {
+                            "title": "2nd choice 1"
+                        },
+                        {
+                            "correct": true,
+                            "title": "2nd choice 2"
+                        },
+                        {
+                            "title": "2nd choice 3"
+                        }
+                    ]
+                },
+                "3": {
+                    "title": "2nd question 3",
+                    "choices": [
+                        {
+                            "correct": true,
+                            "title": "2nd choice 1"
+                        },
+                        {
+                            "correct": true,
+                            "title": "2nd choice 2"
                         }
                     ]
                 }

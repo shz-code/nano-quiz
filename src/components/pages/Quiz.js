@@ -1,11 +1,10 @@
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, update } from "firebase/database";
 import _ from "lodash";
 import React, { useEffect, useReducer, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import useQuestions from "../../hooks/useQuestions";
 import Answer from "../Answer";
-import Miniplayer from "../Miniplayer";
 import Progress from "../Progress";
 
 const initialState = [];
@@ -63,19 +62,35 @@ export default function Quiz() {
   };
 
   const submit = async () => {
+    let correctAns = 0;
     const db = getDatabase();
-    const { uid } = currentUser;
-    const resultRef = ref(db, `results/${uid}`);
+    const { photoURL } = currentUser;
+    const resultRef = ref(db, `results/${photoURL}`);
 
-    await set(resultRef, {
-      [id]: modQuestions,
+    modQuestions.forEach((question, index1) => {
+      let correctIndex = [],
+        checkedIndex = [];
+      question.choices.forEach((choice, index2) => {
+        if (choice.correct) {
+          correctIndex.push(index2);
+        }
+        if (choice.checked) {
+          checkedIndex.push(index2);
+        }
+      });
+      if (_.isEqual(checkedIndex, correctIndex)) {
+        correctAns += 1;
+      }
     });
 
-    navigate(`/result/${id}`, {
-      state: {
-        modQuestions: modQuestions,
+    await update(resultRef, {
+      [id]: {
+        correctAns: `${correctAns}`,
+        modQuestions,
       },
     });
+
+    navigate(`/result/${id}`);
   };
 
   return (
@@ -90,6 +105,7 @@ export default function Quiz() {
           <Answer
             choices={modQuestions[currentQna].choices}
             handleCheckBox={handleCheckBox}
+            input={true}
           />
           <Progress
             handleCurrentQna={handleCurrentQna}
@@ -97,7 +113,6 @@ export default function Quiz() {
             length={questions.length}
             submit={submit}
           />
-          <Miniplayer />
         </div>
       )}
     </>

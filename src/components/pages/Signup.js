@@ -11,6 +11,7 @@ import TextInput from "../TextInput";
 export default function Signup() {
   const [name, Setname] = useState("");
   const [email, Setemail] = useState("");
+  const [uniID, SetUniID] = useState("");
   const [pass, Setpass] = useState("");
   const [conpass, Setconpass] = useState("");
   const [agree, Setagree] = useState(true);
@@ -32,7 +33,7 @@ export default function Signup() {
     try {
       Seterror("");
       Setloading(true);
-      await signup(email, pass, name);
+      await signup(email, pass, name, uniID);
       navigator("/");
     } catch (err) {
       Seterror("Failed to create account");
@@ -56,12 +57,21 @@ export default function Signup() {
           />
 
           <TextInput
-            type="text"
+            type="email"
             required
             placeholder="Enter email"
             icon="alternate_email"
             value={email}
             onChange={(e) => Setemail(e.target.value)}
+          />
+
+          <TextInput
+            type="number"
+            required
+            placeholder="Enter University ID"
+            icon="pin"
+            value={uniID}
+            onChange={(e) => SetUniID(e.target.value)}
           />
 
           <TextInput

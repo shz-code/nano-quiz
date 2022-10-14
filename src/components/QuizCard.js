@@ -6,12 +6,11 @@ import { useAuth } from "../contexts/AuthContext";
 export default function QuizCard({ item }) {
   const { sl, title, img, noq } = item;
   const { currentUser } = useAuth();
-  const { uid } = currentUser;
   const navigate = useNavigate();
 
   const preCheck = async () => {
     const db = getDatabase();
-    const resultRef = ref(db, `results/${uid}/${sl}`);
+    const resultRef = ref(db, `results/${currentUser?.photoURL}/${sl}`);
     const reesultQuery = query(resultRef);
     try {
       const snapshot = await get(reesultQuery);

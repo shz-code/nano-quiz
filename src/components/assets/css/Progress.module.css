@@ -90,7 +90,6 @@
 .tooltip {
     position: absolute;
     top: -70px;
-    left: calc(50% - 58px);
     width: 130px;
     background-color: var(--fontPrimary);
     color: #fff;
@@ -113,7 +112,9 @@
     transform: rotate(45deg) translate(-50%, 100%);
 }
 
-
-.progressBar:hover .tooltip {
-    display: block;
+.warningMsg {
+    color: red;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
 }
