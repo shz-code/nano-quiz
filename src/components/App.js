@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AuthProvider from "../contexts/AuthContext";
 import Layouts from "./Layouts";
 import { Home, Login, Quiz, Result, Signup } from "./pages/";
+import AllResults from "./pages/AllResults";
 import PrivateOutlet from "./PrivateOutlet";
 import PublicOutlet from "./PublicOutlet";
 
@@ -16,6 +17,7 @@ export default function App() {
           <Layouts>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/all_results" element={<AllResults />} />
               <Route path="/*" element={<PublicOutlet />}>
                 <Route path="signup" element={<Signup />} />
                 <Route path="login" element={<Login />} />

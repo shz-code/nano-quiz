@@ -4,7 +4,7 @@ import Quizzes from "../Quizzes";
 export default function Home() {
   const auth = useAuth();
   const { currentUser } = auth;
-  console.log(currentUser);
+
   return (
     <div>
       <h1>

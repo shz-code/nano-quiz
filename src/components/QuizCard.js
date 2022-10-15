@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
-export default function QuizCard({ item }) {
+export default function QuizCard({ item, score }) {
   const { sl, title, img, noq } = item;
   const { currentUser } = useAuth();
   const navigate = useNavigate();
@@ -32,7 +32,14 @@ export default function QuizCard({ item }) {
           </p>
           <div className="qmeta">
             <p>{noq} Questions</p>
-            <p>Score : {noq * 5}</p>
+            {score ? (
+              <p>
+                <span className="material-icons-outlined">done</span>
+                Score : {score * 5} / {noq * 5}
+              </p>
+            ) : (
+              <p>Score : {noq * 5}</p>
+            )}
           </div>
         </div>
       </div>

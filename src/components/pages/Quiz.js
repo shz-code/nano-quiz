@@ -85,6 +85,7 @@ export default function Quiz() {
 
     await update(resultRef, {
       [id]: {
+        sl: id,
         correctAns: `${correctAns}`,
         modQuestions,
       },

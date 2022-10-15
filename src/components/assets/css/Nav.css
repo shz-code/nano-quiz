@@ -1,26 +1,24 @@
 /* nav component */
-.nav {
-  display: flex;
+nav {
   background-color: var(--navBackground);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
   border-bottom: 1px solid #e5e5e5;
   z-index: 1;
+  padding: 20px 0;
+}
+
+.nav {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav ul {
-  width: 50%;
-  height: 60px;
   list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.nav ul:first-child {
-  margin-left: 30px;
+  column-gap: 40px;
+  font-weight: bolder;
 }
 
 .nav .brand {
@@ -46,7 +44,6 @@
   gap: 0.5rem;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 30px;
   font-size: 12px;
 }
 

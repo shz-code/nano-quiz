@@ -1,12 +1,11 @@
 /* layout component */
 .main {
     width: 100%;
-    padding: 4rem 0;
 }
 
 .container {
-    width: 90%;
-    margin: 2rem auto;
+    width: 75%;
+    margin: 2rem auto 0;
 }
 
 .footer {

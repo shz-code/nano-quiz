@@ -5,15 +5,23 @@ import "./assets/css/Nav.css";
 import logo from "./assets/images/nano-logo.png";
 export default function Nav() {
   return (
-    <nav className="nav">
-      <ul>
-        <li>
-          <Link to="/" className="brand">
-            <img src={logo} alt="Nano Quiz Logo" />
-          </Link>
-        </li>
-      </ul>
-      <Accounts />
+    <nav>
+      <div className="nav">
+        <ul>
+          <li>
+            <Link to="/" className="brand">
+              <img src={logo} alt="Nano Quiz Logo" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/">Quizzes</Link>
+          </li>
+          <li>
+            <Link to="/all_results">Results</Link>
+          </li>
+        </ul>
+        <Accounts />
+      </div>
     </nav>
   );
 }

@@ -1,272 +1,175 @@
 {
-    "quiz": [
-        {
-            "noq": 4,
-            "title": "1st web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 1
-        },
-        {
-            "noq": 4,
-            "title": "2nd web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 2
-        },
-        {
-            "noq": 4,
-            "title": "3nd web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 3
-        },
-        {
-            "noq": 4,
-            "title": "4nd web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 4
-        },
-        {
-            "noq": 5,
-            "title": "5nd web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 5
-        },
-        {
-            "noq": 6,
-            "title": "6nd web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 6
-        },
-        {
-            "noq": 47,
-            "title": "7nd web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 7
-        },
-        {
-            "noq": 8,
-            "title": "8nd web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 8
-        },
-        {
-            "noq": 9,
-            "title": "9nd web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 9
-        },
-        {
-            "noq": 10,
-            "title": "10th web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 10
-        },
-        {
-            "noq": 411,
-            "title": "11th web design quiz",
-            "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
-            "sl": 11
-        }
-    ],
-    "questions": {
-        "1": {
-            "contents": {
-                "1": {
-                    "title": "What is CSS",
-                    "choices": [
-                        {
-                            "title": "Cascade Style Sheet"
-                        },
-                        {
-                            "title": "Common Style Sheet"
-                        },
-                        {
-                            "title": "Commute Style Sheet"
-                        },
-                        {
-                            "title": "Cascade SSR Sheet"
-                        },
-                        {
-                            "title": "Common SSR Shell"
-                        },
-                        {
-                            "title": "Cascade Style Shell"
-                        }
-                    ]
-                },
-                "2": {
-                    "title": "What is HTML",
-                    "choices": [
-                        {
-                            "title": "Hyper"
-                        },
-                        {
-                            "title": "Higher"
-                        }
-                    ]
-                },
-                "3": {
-                    "title": "What is NEXT",
-                    "choices": [
-                        {
-                            "title": "JS library"
-                        },
-                        {
-                            "title": "Ruby on Rail"
-                        }
-                    ]
-                }
-            }
-        },
-        "2": {
-            "contents": {
-                "1": {
-                    "title": "2nd question 1",
-                    "choices": [
-                        {
-                            "title": "2nd choice 1"
-                        },
-                        {
-                            "title": "2nd choice 2"
-                        },
-                        {
-                            "title": "2nd choice 3"
-                        },
-                        {
-                            "title": "2nd choice 4"
-                        }
-                    ]
-                },
-                "2": {
-                    "title": "2nd question 2",
-                    "choices": [
-                        {
-                            "title": "2nd choice 1"
-                        },
-                        {
-                            "title": "2nd choice 2"
-                        },
-                        {
-                            "title": "2nd choice 3"
-                        }
-                    ]
-                },
-                "3": {
-                    "title": "2nd question 3",
-                    "choices": [
-                        {
-                            "title": "2nd choice 1"
-                        },
-                        {
-                            "title": "2nd choice 2"
-                        }
-                    ]
-                }
-            }
-        }
+  "quiz": [
+    {
+      "noq": 4,
+      "title": "1st web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 1
     },
-    "answers": {
+    {
+      "noq": 4,
+      "title": "2nd web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 2
+    },
+    {
+      "noq": 4,
+      "title": "3nd web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 3
+    },
+    {
+      "noq": 4,
+      "title": "4nd web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 4
+    },
+    {
+      "noq": 5,
+      "title": "5nd web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 5
+    },
+    {
+      "noq": 6,
+      "title": "6nd web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 6
+    },
+    {
+      "noq": 47,
+      "title": "7nd web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 7
+    },
+    {
+      "noq": 8,
+      "title": "8nd web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 8
+    },
+    {
+      "noq": 9,
+      "title": "9nd web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 9
+    },
+    {
+      "noq": 10,
+      "title": "10th web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 10
+    },
+    {
+      "noq": 411,
+      "title": "11th web design quiz",
+      "img": "https://i.ibb.co/pRDPZdS/html-basics-quiz.png",
+      "sl": 11
+    }
+  ],
+  "questions": {
+    "1": {
+      "contents": {
         "1": {
-            "contents": {
-                "1": {
-                    "title": "What is CSS",
-                    "choices": [
-                        {
-                            "correct": true,
-                            "title": "Cascade Style Sheet"
-                        },
-                        {
-                            "title": "Common Style Sheet"
-                        },
-                        {
-                            "title": "Commute Style Sheet"
-                        },
-                        {
-                            "title": "Cascade SSR Sheet"
-                        },
-                        {
-                            "title": "Common SSR Shell"
-                        },
-                        {
-                            "title": "Cascade Style Shell"
-                        }
-                    ]
-                },
-                "2": {
-                    "title": "What is HTML",
-                    "choices": [
-                        {
-                            "correct": true,
-                            "title": "Hyper"
-                        },
-                        {
-                            "title": "Higher"
-                        }
-                    ]
-                },
-                "3": {
-                    "title": "What is NEXT",
-                    "choices": [
-                        {
-                            "correct": true,
-                            "title": "JS library"
-                        },
-                        {
-                            "title": "Ruby on Rail"
-                        }
-                    ]
-                }
+          "title": "What is CSS",
+          "choices": [
+            {
+              "correct": true,
+              "title": "Cascade Style Sheet"
+            },
+            {
+              "title": "Common Style Sheet"
+            },
+            {
+              "title": "Commute Style Sheet"
+            },
+            {
+              "title": "Cascade SSR Sheet"
+            },
+            {
+              "title": "Common SSR Shell"
+            },
+            {
+              "title": "Cascade Style Shell"
             }
+          ]
         },
         "2": {
-            "contents": {
-                "1": {
-                    "title": "2nd question 1",
-                    "choices": [
-                        {
-                            "correct": true,
-                            "title": "2nd choice 1"
-                        },
-                        {
-                            "title": "2nd choice 2"
-                        },
-                        {
-                            "title": "2nd choice 3"
-                        },
-                        {
-                            "correct": true,
-                            "title": "2nd choice 4"
-                        }
-                    ]
-                },
-                "2": {
-                    "title": "2nd question 2",
-                    "choices": [
-                        {
-                            "title": "2nd choice 1"
-                        },
-                        {
-                            "correct": true,
-                            "title": "2nd choice 2"
-                        },
-                        {
-                            "title": "2nd choice 3"
-                        }
-                    ]
-                },
-                "3": {
-                    "title": "2nd question 3",
-                    "choices": [
-                        {
-                            "correct": true,
-                            "title": "2nd choice 1"
-                        },
-                        {
-                            "correct": true,
-                            "title": "2nd choice 2"
-                        }
-                    ]
-                }
+          "title": "What is HTML",
+          "choices": [
+            {
+              "correct": true,
+              "title": "Hyper"
+            },
+            {
+              "title": "Higher"
             }
+          ]
+        },
+        "3": {
+          "title": "What is NEXT",
+          "choices": [
+            {
+              "correct": true,
+              "title": "JS library"
+            },
+            {
+              "title": "Ruby on Rail"
+            }
+          ]
         }
+      }
+    },
+    "6": {
+      "contents": {
+        "1": {
+          "title": "2nd question 1",
+          "choices": [
+            {
+              "correct": true,
+              "title": "2nd choice 1"
+            },
+            {
+              "title": "2nd choice 2"
+            },
+            {
+              "title": "2nd choice 3"
+            },
+            {
+              "correct": true,
+              "title": "2nd choice 4"
+            }
+          ]
+        },
+        "2": {
+          "title": "2nd question 2",
+          "choices": [
+            {
+              "title": "2nd choice 1"
+            },
+            {
+              "correct": true,
+              "title": "2nd choice 2"
+            },
+            {
+              "title": "2nd choice 3"
+            }
+          ]
+        },
+        "3": {
+          "title": "2nd question 3",
+          "choices": [
+            {
+              "correct": true,
+              "title": "2nd choice 1"
+            },
+            {
+              "correct": true,
+              "title": "2nd choice 2"
+            }
+          ]
+        }
+      }
     }
+  }
 }

@@ -19,6 +19,16 @@
     margin: 0.5rem 0;
 }
 
+.quiz p span {
+    position: relative;
+    background: var(--successGreen);
+    font-size: 0.9rem;
+    margin-right: 5px;
+    padding: 3px;
+    border-radius: 50%;
+    top: 2px;
+}
+
 .quiz img {
     width: 100%;
     object-fit: cover;

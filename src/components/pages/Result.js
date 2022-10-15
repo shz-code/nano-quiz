@@ -9,7 +9,7 @@ export default function Result() {
   const { currentUser } = useAuth();
   const { photoURL } = currentUser;
   const { id } = useParams();
-  const { loading, error, answers } = useAnswers(id, photoURL);
+  const { loading, error, answers } = useAnswers(photoURL, id);
   const navigate = useNavigate();
 
   if (error) navigate("/");
