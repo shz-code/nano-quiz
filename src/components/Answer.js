@@ -18,7 +18,9 @@ export default function Answer({ choices, handleCheckBox, input }) {
             ) : (
               <Checkbox
                 className={`${styles.answer} ${
-                  item.correct
+                  item.correct && !item.checked
+                    ? styles.correct_notchecked
+                    : item.correct
                     ? styles.correct
                     : item.checked
                     ? styles.wrong

@@ -6,12 +6,24 @@ export default function ResultTable({ item }) {
   console.log(item);
   return (
     <div>
-      <h1>All Quiz Records</h1>
       <div className="result_table">
         <div className="row">
-          <div>Quiz Number: {sl}</div>
+          <div>
+            {" "}
+            <span className="title">Quiz Number:</span> {sl}
+          </div>
           <div>
             You Got {correctAns * 5} out of {modQuestions.length * 5}{" "}
+          </div>
+          <div>
+            <span className="title">Remarks: </span>{" "}
+            {parseInt((correctAns / modQuestions.length) * 100) === 100
+              ? "Excellent"
+              : parseInt((correctAns / modQuestions.length) * 100) > 80
+              ? "Great"
+              : parseInt((correctAns / modQuestions.length) * 100) > 60
+              ? "Good"
+              : "You can do better"}
           </div>
           <div>
             <Link to={`/result/${sl}`}>Go to result page</Link>

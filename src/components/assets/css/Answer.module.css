@@ -48,6 +48,11 @@
     font-weight: 600;
 }
 
+.correct_notchecked {
+    background: yellow !important;
+    font-weight: 600;
+}
+
 .wrong {
     background: var(--dangerRed) !important;
     font-weight: 600;

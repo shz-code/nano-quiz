@@ -1,6 +1,7 @@
 import { get, getDatabase, orderByKey, query, ref } from "firebase/database";
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
+import "../assets/css/AllResults.css";
 import ResultTable from "../ResultTable";
 
 export default function AllResults() {
@@ -36,7 +37,7 @@ export default function AllResults() {
   }, [photoURL]);
 
   return (
-    <div className="quizzes">
+    <div>
       {show ? (
         loading ? (
           <div>Loading...</div>
@@ -48,6 +49,7 @@ export default function AllResults() {
       ) : (
         <div>Do your first Quiz...</div>
       )}
+      <h1>All Quiz Records</h1>
 
       {answers.length > 0 &&
         answers.map((item) => <ResultTable item={item} key={item.sl} />)}
