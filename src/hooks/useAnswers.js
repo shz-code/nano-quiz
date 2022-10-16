@@ -23,7 +23,6 @@ export default function useAnswers(uniID, id) {
         }
       } catch (err) {
         Seterror(true);
-        console.log(err);
       }
     };
     fetchData();

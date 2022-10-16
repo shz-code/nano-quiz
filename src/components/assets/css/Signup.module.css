@@ -1,3 +1,14 @@
+.signup_col {
+    display: flex;
+    align-items: center;
+}
+
+.signup_img {
+    width: 50%;
+}
+
 .signup {
     height: 100%;
+    margin: 20px 0;
+    width: 50%;
 }

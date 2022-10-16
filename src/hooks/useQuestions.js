@@ -22,7 +22,6 @@ export default function useQuestions(questionID) {
       } catch (err) {
         Seterror(true);
         Setloading(false);
-        console.log(err);
       }
     };
     fetchQuestions();

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Accounts from "./Accounts";
 import "./assets/css/Nav.css";
-import logo from "./assets/images/nano-logo.png";
+import Logo from "./Logo";
 export default function Nav() {
   return (
     <nav>
@@ -10,7 +10,7 @@ export default function Nav() {
         <ul>
           <li>
             <Link to="/" className="brand">
-              <img src={logo} alt="Nano Quiz Logo" />
+              <Logo className="logo" />
             </Link>
           </li>
           <li>

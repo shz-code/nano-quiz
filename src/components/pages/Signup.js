@@ -44,8 +44,10 @@ export default function Signup() {
   return (
     <>
       <h1>Create an account</h1>
-      <div className="column">
-        <Illustration type="signup" />
+      <div className={styles.signup_col}>
+        <div className={styles.signup_img}>
+          <Illustration type="signup" />
+        </div>
         <Form className={styles.signup} onSubmit={handleSubmit}>
           <TextInput
             type="text"
@@ -92,7 +94,7 @@ export default function Signup() {
             onChange={(e) => Setconpass(e.target.value)}
           />
           <Checkbox
-            text="I agree to the Terms &amp; Conditions"
+            text="I agree to share my email and university ID for records and evaluations."
             checked={agree}
             onChange={(e) => Setagree(e.target.checked)}
           />

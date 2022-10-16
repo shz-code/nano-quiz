@@ -27,9 +27,8 @@ export default function QuizCard({ item, score }) {
       <div onClick={preCheck}>
         <div className="quiz">
           <img src={img} alt="" />
-          <p>
-            #{sl} {title}
-          </p>
+          <p>{title}</p>
+          <p className="quiz-desc">Quiz Description</p>
           <div className="qmeta">
             <p>{noq} Questions</p>
             {score ? (
@@ -38,7 +37,7 @@ export default function QuizCard({ item, score }) {
                 Score : {score * 5} / {noq * 5}
               </p>
             ) : (
-              <p>Score : {noq * 5}</p>
+              <p>Total Score : {noq * 5}</p>
             )}
           </div>
         </div>

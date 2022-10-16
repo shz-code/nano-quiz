@@ -7,11 +7,13 @@ export default function Home() {
 
   return (
     <div>
-      <h1>
-        Welcome{" "}
-        <span className="Logged-in-user">{currentUser?.displayName}</span> to
-        your dashboard
-      </h1>
+      {currentUser && (
+        <h1>
+          Welcome
+          <span className="Logged-in-user"> {currentUser.displayName}</span>.
+          Complete available quizzes now!
+        </h1>
+      )}
       <Quizzes />
     </div>
   );

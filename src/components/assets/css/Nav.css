@@ -13,6 +13,10 @@ nav {
   justify-content: space-between;
 }
 
+.logo {
+  width: 50px;
+}
+
 .nav ul {
   list-style: none;
   display: flex;
@@ -21,17 +25,12 @@ nav {
   font-weight: bolder;
 }
 
-.nav .brand {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.nav ul a {
+  color: var(--fontPrimary);
+  text-decoration: none;
 }
 
-.nav .brand img {
-  width: 200px;
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .nav .brand img {
     width: 100px;
   }
@@ -47,7 +46,13 @@ nav {
   font-size: 12px;
 }
 
+.account a {
+  text-decoration: none;
+  font-size: 1rem;
+}
 
-.account>span:last-child {
+
+.account span {
+  color: var(--fontPrimary);
   cursor: pointer;
 }

@@ -11,8 +11,7 @@ export default function Quizzes() {
   const { loading, error, quizList, hasMore } = useQuizList(page);
   const auth = useAuth();
   const { currentUser } = auth;
-  const { photoURL } = currentUser;
-  const { answers } = useAnswers(photoURL);
+  const { answers } = useAnswers(currentUser?.photoURL);
 
   const prevAns = () => {
     let prevRecords = [],
@@ -40,24 +39,26 @@ export default function Quizzes() {
         <InfiniteScroll
           dataLength={quizList.length}
           hasMore={hasMore}
-          next={() => Setpage((prev) => prev + 8)}
+          next={() => Setpage((prev) => prev + 10)}
+          loader={<h4>Loading...</h4>}
+          endMessage={
+            <p style={{ textAlign: "center" }}>
+              <b>That's all the quizzes for now!</b>
+            </p>
+          }
         >
           {quizList.map((item, index) =>
             answers?.length > 0 ? (
               prevSlArr[0].prevSl.includes(item.sl.toString()) ? (
-                <>
-                  <p>
-                    <QuizCard
-                      item={item}
-                      key={item.sl}
-                      score={
-                        prevSlArr[0].prevRecords[
-                          prevSlArr[0].prevSl.indexOf(item.sl.toString())
-                        ].prevScore
-                      }
-                    />
-                  </p>
-                </>
+                <QuizCard
+                  item={item}
+                  key={item.sl}
+                  score={
+                    prevSlArr[0].prevRecords[
+                      prevSlArr[0].prevSl.indexOf(item.sl.toString())
+                    ].prevScore
+                  }
+                />
               ) : (
                 <QuizCard item={item} key={item.sl} />
               )

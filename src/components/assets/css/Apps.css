@@ -7,11 +7,11 @@
     --successGreen: #00ff84;
     --dangerRed: #ffc0c7;
     --questionBG: #e4e8ee;
-    --fontPrimary: #3F3C3C;
+    --fontPrimary: #212227;
+    --card-bg: #fff;
     /* --fontPrimary: #002333; */
     --active: #2dbf64;
-    --logo-color: #3F3C3C;
-    --theme-color: red;
+    --theme-color: #DA4167;
 }
 
 * {
@@ -27,8 +27,7 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: red;
+    color: var(--theme-color);
 }
 
 h4 {

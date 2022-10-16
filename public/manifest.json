@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Nano Quiz",
+  "name": "React quiz app to conduct simple client side quiz text.",
   "icons": [
     {
       "src": "favicon.ico",

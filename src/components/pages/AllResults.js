@@ -1,5 +1,6 @@
 import { get, getDatabase, orderByKey, query, ref } from "firebase/database";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import "../assets/css/AllResults.css";
 import ResultTable from "../ResultTable";
@@ -47,9 +48,9 @@ export default function AllResults() {
           <div>No Data Found! </div>
         ) : null
       ) : (
-        <div>Do your first Quiz...</div>
+        <Link to="/">Complete your fisrt quiz to see results.</Link>
       )}
-      <h1>All Quiz Records</h1>
+      {show && <h1>All Quiz Records</h1>}
 
       {answers.length > 0 &&
         answers.map((item) => <ResultTable item={item} key={item.sl} />)}

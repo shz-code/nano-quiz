@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./assets/css/Illustration.module.css";
-import login_img from "./assets/images/login.svg";
-import signup_img from "./assets/images/signup.svg";
+import login_img from "./assets/images/secure_login.svg";
+import signup_img from "./assets/images/welcome.svg";
 
 export default function Illustration({ type }) {
   return (

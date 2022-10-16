@@ -23,7 +23,7 @@ export default function useQuizList(page) {
         quizRef,
         orderByKey(),
         startAt("" + page),
-        limitToFirst(8)
+        limitToFirst(10)
       );
 
       try {
@@ -47,7 +47,6 @@ export default function useQuizList(page) {
       } catch (err) {
         Seterror(true);
         Setloading(false);
-        console.log(err);
       }
     }
     fetchData();

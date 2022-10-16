@@ -64,8 +64,9 @@ export default function Quiz() {
   const submit = async () => {
     let correctAns = 0;
     const db = getDatabase();
-    const { photoURL } = currentUser;
+    const { photoURL, displayName } = currentUser;
     const resultRef = ref(db, `results/${photoURL}`);
+    const userDetailsRef = ref(db, `userRecords/`);
 
     modQuestions.forEach((question, index1) => {
       let correctIndex = [],
@@ -82,12 +83,18 @@ export default function Quiz() {
         correctAns += 1;
       }
     });
-
     await update(resultRef, {
       [id]: {
         sl: id,
         correctAns: `${correctAns}`,
         modQuestions,
+      },
+    });
+    await update(userDetailsRef, {
+      [Date.now() + Math.floor(Math.random() * 1000)]: {
+        displayName: displayName,
+        uniID: photoURL,
+        sl: id,
       },
     });
 

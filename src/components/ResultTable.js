@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function ResultTable({ item }) {
   const { sl, correctAns, modQuestions } = item;
-  console.log(item);
   return (
     <div>
       <div className="result_table">
