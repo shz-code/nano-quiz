@@ -4,6 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AuthProvider from "../contexts/AuthContext";
 import Admin from "./Admin";
+import AdminRoute from "./AdminRoute";
 import Layouts from "./Layouts";
 import { Home, Login, Quiz, Result, Signup } from "./pages/";
 import AllResults from "./pages/AllResults";
@@ -26,9 +27,9 @@ export default function App() {
                 <Route path="quiz/:id" element={<Quiz />} />
                 <Route path="result/:id" element={<Result />} />
                 <Route path="all_results" element={<AllResults />} />
-                <Route path="admin" element={<Admin />} />
-                {/* <Route path="/*" element={<AdminRoute />}>
-                </Route> */}
+                <Route path="/*" element={<AdminRoute />}>
+                  <Route path="admin" element={<Admin />} />
+                </Route>
               </Route>
             </Routes>
           </Layouts>

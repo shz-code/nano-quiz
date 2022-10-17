@@ -31,7 +31,7 @@ export default function QuizCard({ item, score }) {
           <p className="quiz-desc">Quiz Description</p>
           <div className="qmeta">
             <p>{noq} Questions</p>
-            {score ? (
+            {score >= 0 ? (
               <p>
                 <span className="material-icons-outlined">done</span>
                 Score : {score * 5} / {noq * 5}

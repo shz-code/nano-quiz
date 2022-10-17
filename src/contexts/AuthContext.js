@@ -6,6 +6,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+import { getDatabase, ref, update } from "firebase/database";
 import { createContext, useContext, useEffect, useState } from "react";
 import "../firebase";
 
@@ -29,6 +30,24 @@ export default function AuthProvider({ children }) {
     return authChange;
   }, []);
 
+  const SetProfile = async (user, username, universityID) => {
+    const db = getDatabase();
+    const profileRef = ref(db, "userProfile/");
+    try {
+      await update(profileRef, {
+        [user.uid]: {
+          name: username,
+          totalCorrect: 0,
+          totalQuestionsAttempt: 0,
+          totalQuizAttempt: 0,
+          uniID: universityID,
+        },
+      });
+    } catch (err) {
+      console.log("There was an error");
+    }
+  };
+
   const signup = async (email, password, username, universityID) => {
     const auth = getAuth();
     await createUserWithEmailAndPassword(auth, email, password);
@@ -37,6 +56,7 @@ export default function AuthProvider({ children }) {
       photoURL: universityID,
     });
     SetcurrentUser({ ...auth.currentUser });
+    SetProfile(auth.currentUser, username, universityID);
   };
 
   const login = async (email, password) => {

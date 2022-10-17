@@ -1,9 +1,10 @@
-import { getDatabase, ref, update } from "firebase/database";
+import { getDatabase, ref, set, update } from "firebase/database";
 import _ from "lodash";
 import React, { useEffect, useReducer, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import useQuestions from "../../hooks/useQuestions";
+import useUserProfile from "../../hooks/useUserProfile";
 import Answer from "../Answer";
 import Progress from "../Progress";
 
@@ -36,6 +37,12 @@ export default function Quiz() {
   const { currentUser } = useAuth();
   const navigate = useNavigate();
 
+  const { profile } = useUserProfile(currentUser.uid);
+
+  let totalCorrects = profile[1];
+  let totalQuestionsAttempts = profile[2];
+  let totalQuizzes = profile[3];
+
   useEffect(() => {
     dispatch({ type: "mod", value: questions });
   }, [questions]);
@@ -63,10 +70,11 @@ export default function Quiz() {
 
   const submit = async () => {
     let correctAns = 0;
+
     const db = getDatabase();
-    const { photoURL, displayName } = currentUser;
+    const { photoURL, uid, displayName } = currentUser;
     const resultRef = ref(db, `results/${photoURL}`);
-    const userDetailsRef = ref(db, `userRecords/`);
+    const userProfileRef = ref(db, `userProfile/${uid}`);
 
     modQuestions.forEach((question, index1) => {
       let correctIndex = [],
@@ -86,16 +94,19 @@ export default function Quiz() {
     await update(resultRef, {
       [id]: {
         sl: id,
-        correctAns: `${correctAns}`,
+        correctAns: correctAns,
         modQuestions,
       },
     });
-    await update(userDetailsRef, {
-      [Date.now() + Math.floor(Math.random() * 1000)]: {
-        displayName: displayName,
-        uniID: photoURL,
-        sl: id,
-      },
+    totalQuizzes++;
+    totalCorrects += correctAns;
+    totalQuestionsAttempts += modQuestions.length;
+    await set(userProfileRef, {
+      name: displayName,
+      totalQuizAttempt: totalQuizzes,
+      totalCorrect: totalCorrects,
+      totalQuestionsAttempt: totalQuestionsAttempts,
+      uniID: photoURL,
     });
 
     navigate(`/result/${id}`);

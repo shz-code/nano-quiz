@@ -5,5 +5,9 @@ import { useAuth } from "../contexts/AuthContext";
 export default function AdminRoute() {
   const auth = useAuth();
   const { currentUser } = auth;
-  return currentUser.photoURL === "21203010" ? <Outlet /> : <Navigate to="/" />;
+  return currentUser.email === "shahidula699@gmail.com" ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/" />
+  );
 }

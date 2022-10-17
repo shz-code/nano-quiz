@@ -1,0 +1,41 @@
+.all_users {
+    margin: 40px 0;
+    display: grid;
+    row-gap: 20px;
+}
+
+.row_user {
+    display: grid;
+    padding: 20px 10px;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    background: var(--navBackground);
+    border-radius: 5px 5px 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .row_user {
+        grid-template-columns: repeat(2, auto);
+        row-gap: 10px;
+    }
+}
+
+.title {
+    font-weight: bolder;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    background: var(--navBackground);
+    padding: 10px 10px;
+}
+
+.status span {
+    position: relative;
+    background: var(--successGreen);
+    font-size: 0.9rem;
+    margin-right: 5px;
+    padding: 3px;
+    border-radius: 50%;
+}

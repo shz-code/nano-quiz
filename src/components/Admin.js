@@ -1,38 +1,26 @@
 import React from "react";
-import useAllResults from "../hooks/useAllRecords";
+import useAppInfo from "../hooks/useAppInfo";
+import useUserProfiles from "../hooks/useUserProfiles";
 import AllUsers from "./AllUsers";
+import "./assets/css/Admin.css";
 
 export default function Admin() {
-  const { records, loading, error, info } = useAllResults();
-
-  const prePopulate = () => {
-    let userUniIDs = [],
-      userRecords = [];
-    records.forEach((record) => {
-      if (!userUniIDs.includes(record.uniID)) {
-        userUniIDs.push(record.uniID);
-        userRecords.push({
-          name: record.displayName,
-          uniID: record.uniID,
-        });
-      }
-    });
-    return userRecords;
-  };
-
-  const userData = prePopulate();
+  const { profiles, loading, error } = useUserProfiles();
+  const { info } = useAppInfo();
 
   return (
     <div>
-      {!loading && records.length === 0 && <div>No Data Found!</div>}
+      {!loading && profiles.length === 0 && <div>No Data Found!</div>}
       {error && <div>There was an error!</div>}
       {loading && <div>Loading...</div>}
-      {!loading && !error && userData.length > 0 && (
+      {!loading && !error && profiles.length > 0 && (
         <>
           <h1>List of all users</h1>
-          {userData.map((data, index) => (
-            <AllUsers key={index} data={data} totalQ={info[0]} />
-          ))}
+          <div className="all_users">
+            {profiles.map((data, index) => (
+              <AllUsers key={index} data={data} info={info[0]} />
+            ))}
+          </div>
         </>
       )}
     </div>
