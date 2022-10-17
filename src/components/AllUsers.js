@@ -18,7 +18,7 @@ export default function AllUsers({ data, info }) {
           {parseInt((totalCorrect / totalQuestionsAttempt) * 100)}%
         </div>
         <div>
-          <Link to={`user/${uniID}`}> Go to user details</Link>
+          <Link to={`/user_results/${uniID}/${name}`}> Go to user details</Link>
         </div>
       </div>
       <div>

@@ -1,20 +1,13 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { useAuth } from "../../contexts/AuthContext";
+import { useParams } from "react-router-dom";
 import useAnswers from "../../hooks/useAnswers";
 import Analysis from "../Analysis";
 import Summary from "../Summary";
 
-export default function Result() {
-  const { currentUser } = useAuth();
-  const { photoURL } = currentUser;
-  const { id } = useParams();
+export default function UserResult() {
+  const { id, uniID } = useParams();
 
-  const { loading, error, answers } = useAnswers(photoURL, id);
-
-  const navigate = useNavigate();
-
-  if (error) navigate("/");
+  const { loading, error, answers } = useAnswers(uniID, id);
 
   return (
     <>

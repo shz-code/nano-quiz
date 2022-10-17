@@ -8,6 +8,7 @@
     display: grid;
     padding: 20px 10px;
     grid-template-columns: repeat(3, auto);
+    row-gap: 20px;
     justify-content: space-between;
     background: var(--navBackground);
     border-radius: 5px 5px 0 0;

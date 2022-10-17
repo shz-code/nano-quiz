@@ -1,8 +1,8 @@
 import React from "react";
-import useAppInfo from "../hooks/useAppInfo";
-import useUserProfiles from "../hooks/useUserProfiles";
-import AllUsers from "./AllUsers";
-import "./assets/css/Admin.css";
+import useAppInfo from "../../hooks/useAppInfo";
+import useUserProfiles from "../../hooks/useUserProfiles";
+import AllUsers from "../AllUsers";
+import "../assets/css/Admin.css";
 
 export default function Admin() {
   const { profiles, loading, error } = useUserProfiles();

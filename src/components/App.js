@@ -3,11 +3,13 @@ import "./assets/css/Apps.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AuthProvider from "../contexts/AuthContext";
-import Admin from "./Admin";
 import AdminRoute from "./AdminRoute";
 import Layouts from "./Layouts";
 import { Home, Login, Quiz, Result, Signup } from "./pages/";
+import Admin from "./pages/Admin";
 import AllResults from "./pages/AllResults";
+import UserResult from "./pages/UserResult";
+import UserResults from "./pages/UserResults";
 import PrivateOutlet from "./PrivateOutlet";
 import PublicOutlet from "./PublicOutlet";
 
@@ -29,6 +31,11 @@ export default function App() {
                 <Route path="all_results" element={<AllResults />} />
                 <Route path="/*" element={<AdminRoute />}>
                   <Route path="admin" element={<Admin />} />
+                  <Route
+                    path="user_results/:uniID/:name"
+                    element={<UserResults />}
+                  />
+                  <Route path="result/:uniID/:id" element={<UserResult />} />
                 </Route>
               </Route>
             </Routes>
