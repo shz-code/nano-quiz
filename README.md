@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+![nano-quiz logo](./src/components/assets/images/Nano%20Quiz.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Nano-Quiz | Simple Quiz App with Authentication & Quiz Analysis | A react app.
 
-## Available Scripts
+Tech & Tools used:
 
-In the project directory, you can run:
+- React js
+- React-router-dom
+- Firebase Authentication
+- Firebase Realtime Database
 
-### `npm start`
+## Features of Nano-Quiz
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- All quiz page with infinity scroll & see quiz result if already given.
+- Results & Summary page.
+- All quiz results page.
+- Admin account added for checking all current users and their quiz results.
+- Responsive design
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Multi Paged Web App
 
-### `npm test`
+This app contains pages like:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### All Pages
 
-### `npm run build`
+- Homep page
+- Individual quiz results page
+- All quizzes results page and evaluation
+- Admin page for admin account
+- All users quiz result view page for admin account.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- # [`Nano-Quiz` Website Hosted on Netlify](https://ffitness.netlify.app)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1a75d442-ec67-48f3-8172-bab285761459/deploy-status)](https://app.netlify.com/sites/nano-quiz/deploys) -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- ## Snapshot -->
 
-### `npm run eject`
+<!-- ![Nano-Quiz](./src/assets/img/website-preview.jpeg) -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Environment Variables
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run this project, you will need to add the following environment variables to your .env file as this app uses firebase as backend.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`REACT_APP_API_KEY`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`REACT_APP_AUTH_DOMAIN`
 
-## Learn More
+`REACT_APP_PROJECT_ID`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`REACT_APP_STORAGE_BUCKET`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`REACT_APP_MESSAGING_SENDER_ID`
 
-### Code Splitting
+`REACT_APP_ID`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`REACT_APP_DATABASE_URL`
 
-### Analyzing the Bundle Size
+## Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Clone the project
 
-### Making a Progressive Web App
+```bash
+  git clone https://github.com/shz-code/nano-quiz.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Go to the project directory
 
-### Advanced Configuration
+```bash
+  cd nano-quiz
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Install dependencies
 
-### Deployment
+```bash
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Start the server
 
-### `npm run build` fails to minify
+```bash
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Or
+
+```bash
+  yarn start
+```
+
+## Acknowledgements
+
+- [Design inspired & peoject idea from LWS](https://github.com/learnwithsumit)
