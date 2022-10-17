@@ -17,9 +17,12 @@ export default function Admin() {
         <>
           <h1>List of all users</h1>
           <div className="all_users">
-            {profiles.map((data, index) => (
-              <AllUsers key={index} data={data} info={info[0]} />
-            ))}
+            {profiles.map(
+              (data, index) =>
+                data.uniID !== "21203010" && (
+                  <AllUsers key={index} data={data} info={info[0]} />
+                )
+            )}
           </div>
         </>
       )}
